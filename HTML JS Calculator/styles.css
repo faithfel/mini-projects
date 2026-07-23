@@ -11,9 +11,6 @@ body {
     flex-direction: column;
 }
 
-.container {
-
-}
 
 #calc-container {
     display: flex;
