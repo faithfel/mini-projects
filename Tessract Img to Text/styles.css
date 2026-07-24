@@ -17,11 +17,11 @@ body {
     border-radius: 10px;
     padding: 10px;
     display: flex;
-    justify-content: center;
     gap: 10px;
     flex-direction: column;
     max-width: 50vw;
     max-height: 75vh;
+    min-height: 40vh;
     background-color: rgb(12, 12, 12);
 }
 
@@ -34,6 +34,7 @@ body {
     color: #ffffff;
     background-color: rgb(12, 12, 12);  
     max-width: 45vw;
+    min-height: 40vh;
 }
 
 #image-input {
@@ -51,5 +52,9 @@ input[type="file"]::file-selector-button {
 }
 
 #save-btn {
-    width: 50px;
+    width: 35px;
+    height: 25px;
+    border-radius: 4px;
+    border: 1px #202020 solid;
+    background-color: rgb(21, 21, 21);
 }
