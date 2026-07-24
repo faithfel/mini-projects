@@ -23,12 +23,13 @@ const file = event.target.files[0];
 
 
 function copyText() {
-
+const save = document.getElementById("save-btn");
 const textarea = document.getElementById("output");
 
 navigator.clipboard.writeText(textarea.value)
     .then(() => {
-    
+    save.style.color = "#5da042"
+    save.textContent = '✔';
     });
 
 }
