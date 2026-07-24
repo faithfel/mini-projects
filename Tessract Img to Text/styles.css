@@ -77,5 +77,33 @@ input[type="file"]::file-selector-button {
 }
 
 i {
-    color: rgb(255, 0, 68);
+    color: #ff0044;
+}
+
+
+
+.bar {
+  width: 100%;
+  color: #ff0044;
+  font-family: arial;
+  font-size: 12px;
+}
+
+.bar_content {
+  display: block; 
+  width: 100%;
+  transform: translateX(100%); 
+  animation: move 10s linear infinite;
+}
+
+@keyframes move {
+  to { transform: translateX(-100%); }
+}
+
+.div-container {
+    min-width: 35vw;
+    max-width: 35vw;
+    overflow-x: hidden;
+    border-inline: 4px solid #ff0044;
+    border-radius: 4px;
 }

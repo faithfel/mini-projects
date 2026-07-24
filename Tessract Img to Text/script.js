@@ -53,3 +53,7 @@ document.getElementById('download').addEventListener('click', () => { {
 
     URL.revokeObjectURL(fileUrl);
 }});
+
+function reloadPage() {
+    window.location.reload();
+}
