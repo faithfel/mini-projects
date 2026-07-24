@@ -49,3 +49,7 @@ input[type="file"]::file-selector-button {
     border: none;
     border-radius: 4px;
 }
+
+#save-btn {
+    width: 50px;
+}
