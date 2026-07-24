@@ -52,6 +52,8 @@ document.getElementById('download').addEventListener('click', () => { {
     document.body.removeChild(hiddenLink);
 
     URL.revokeObjectURL(fileUrl);
+        download.style.color = "#5da042"
+    download.textContent = '✔';
 }});
 
 function reloadPage() {

@@ -101,7 +101,7 @@ i {
   display: block; 
   width: 100%;
   transform: translateX(100%); 
-  animation: move 10s linear infinite;
+  animation: move 20s linear infinite;
 }
 
 @keyframes move {
