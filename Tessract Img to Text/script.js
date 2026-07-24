@@ -33,3 +33,23 @@ navigator.clipboard.writeText(textarea.value)
     });
 
 }
+
+document.getElementById('download').addEventListener('click', () => { {
+    const dlbtn = document.getElementById('download');
+    const textarea = document.getElementById('output').value;
+    const blob = new Blob([textarea], { type: 'text/plain;charset=utf-8' });
+    
+
+    const fileUrl = URL.createObjectURL(blob);
+
+    const hiddenLink = document.createElement('a');
+    hiddenLink.href = fileUrl;
+    hiddenLink.download = 'my-text-file.txt'; 
+    hiddenLink.style.display = 'none';
+
+    document.body.appendChild(hiddenLink);
+    hiddenLink.click();
+    document.body.removeChild(hiddenLink);
+
+    URL.revokeObjectURL(fileUrl);
+}});
