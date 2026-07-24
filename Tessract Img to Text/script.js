@@ -19,3 +19,16 @@ const file = event.target.files[0];
         console.error(error);
         outputDiv.textContent = 'Error processing image.';
 }});
+
+
+
+function copyText() {
+
+const textarea = document.getElementById("output");
+
+navigator.clipboard.writeText(textarea.value)
+    .then(() => {
+    
+    });
+
+}
