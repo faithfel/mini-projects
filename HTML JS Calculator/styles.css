@@ -25,7 +25,11 @@ body {
     flex-direction: column;
     background-color: #0f0e0e;
 }
-
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
 
 #calc-container {
     display: flex;
@@ -79,7 +83,7 @@ input, select {
     border-radius: 4px;
     color: #ffffff;
     border: 2px rgb(88, 88, 88) solid;
-    border-right: 4px #232323 solid;
-    border-bottom: 4px #232323 solid;
+    border-right: 2px #232323 solid;
+    border-bottom: 2px #232323 solid;
     border-radius: 4px;
 }

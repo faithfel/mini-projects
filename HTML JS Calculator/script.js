@@ -30,6 +30,5 @@ else if (operator === "%") {
    let answer = a % b;
    container.textContent = answer;
 }
-
 }
 
