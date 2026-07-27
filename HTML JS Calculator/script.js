@@ -4,7 +4,7 @@ const num2 = document.querySelector('.second');
 
 const op = document.querySelector('.op');
 
-const container = document.querySelector('.result');
+const container = document.querySelector('h3');
 
 let a = parseInt(num1.value);
 let b = parseInt(num2.value);

@@ -1,12 +1,17 @@
-.doto-<uniquifier> {
-  font-family: "Doto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 551;
-  font-style: normal;
-  font-variation-settings:
-    "ROND" 0;
+@font-face {
+  font-family: 'Doto';
+  src: url('font/Doto_Rounded-SemiBold.ttf');
+  font-weight: regular;
 }
-
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+    font-family: "Press Start 2P";
+    
+}
 body {
     display: flex;
     justify-content: center;
@@ -18,6 +23,7 @@ body {
     align-items: center;
     gap: 10px;
     flex-direction: column;
+    background-color: #0f0e0e;
 }
 
 
@@ -26,18 +32,50 @@ body {
     justify-content: center;
     gap: 10px;
     flex-direction: column;
-    border: 1px black solid;
-    border-radius: 5px;
-    padding: 10px
+    padding: 10px;
+    background-color: #39342d; 
+    border: 6px rgb(88, 88, 88) solid;
+    border-right: 6px #232323 solid;
+    border-bottom: 6px #232323 solid;
+    border-radius: 6px;
+
 }
 
 .result {
-    border: 1px black dotted;
+    border: 4px rgb(88, 88, 88) solid;
+    border-left: 4px #232323 solid;
+    border-top: 4px #232323 solid;
     border-radius: 5px;
     padding: 14px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #ffaa01;
 }
 
+div, h3 {
+    font-family: "Press Start 2P";
+}
+
+h3 {
+    font-size: 30px;
+        color: #ffffff;
+}
 label {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Press Start 2P";
+    color: #ffffff;
+}
+button {
+    background-color: #ffaa01;
+    border: 2px rgb(88, 88, 88) solid;
+    border-right: 4px #232323 solid;
+    border-bottom: 4px #232323 solid;
+    border-radius: 4px;
+
+}
+input, select {
+    background-color: #0f0e0e;
+    border-radius: 4px;
+    color: #ffffff;
+    border: 2px rgb(88, 88, 88) solid;
+    border-right: 4px #232323 solid;
+    border-bottom: 4px #232323 solid;
+    border-radius: 4px;
 }
