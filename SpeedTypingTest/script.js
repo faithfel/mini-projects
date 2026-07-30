@@ -4,10 +4,12 @@ const headerInput = document.querySelector('#headerInput');
 
 const scoreText = document.querySelector('#score');
 const timer = document.querySelector('#timer');
+const wpmTEXT = document.querySelector('#wpmTEXT');
 
 let score = 0;
 let seconds = 0;
 let timerId = null;
+
 
 // never remove focus out of input
 typedByUser.addEventListener('blur', () => {
@@ -17,7 +19,8 @@ typedByUser.addEventListener('blur', () => {
 //getting every input from user 
 typedByUser.addEventListener('input', (event) => {
     headerInput.textContent = event.target.value;
-    compareWord(); 
+    compareWord();
+    
 });
 
 
@@ -75,3 +78,7 @@ document.getElementById("startButton").addEventListener("click", function() {
   }, 1000);
 }
 )
+
+function wpmCalc () {
+
+}
