@@ -2,6 +2,9 @@ const typedByUser = document.querySelector('#typingInput');
 const headerWord = document.querySelector('#headerWord');
 const headerInput = document.querySelector('#headerInput');
 
+const scoreText = document.querySelector('#score');
+
+let score = 0;
 
 // never remove focus out of input
 typedByUser.addEventListener('blur', () => {
@@ -11,9 +14,8 @@ typedByUser.addEventListener('blur', () => {
 //getting every input from user 
 typedByUser.addEventListener('input', (event) => {
     headerInput.textContent = event.target.value;
-    compareWord();
+    compareWord(); 
 });
-
 
 //json api display as h1
 async function getRandomWord() {
@@ -24,20 +26,30 @@ async function getRandomWord() {
     const randomIndex = Math.floor(Math.random() * data.length);
     const randomItem = data[randomIndex];
 
+
     headerWord.textContent = randomItem;
     console.log(randomItem);
-    
+
+    currentRandomItem = randomItem; 
     return randomItem;
   }
 
 
 function compareWord() {
+    if (typedByUser.value === currentRandomItem) {
 
-    if (typedByUser === ) {
-        console.log('yea');
+        console.log("Word matched");
+        getRandomWord();
+
+        typedByUser.value = "";
+        headerInput.textContent = "";
+
+        score ++
+        scoreText.textContent = score;
     }
     else {
-        console.log('nah');
+        console.log("Does not match.");
     }
-
 }
+
+
