@@ -1,0 +1,1 @@
+const typedByUser = document.querySelector('#typingInput');
