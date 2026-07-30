@@ -3,16 +3,17 @@ const headerWord = document.querySelector('#headerWord');
 const headerInput = document.querySelector('#headerInput');
 
 
-//getting every input from user 
-typedByUser.addEventListener('input', (event) => {
-
-    headerInput.textContent = event.target.value;
-});
-
 // never remove focus out of input
 typedByUser.addEventListener('blur', () => {
     typedByUser.focus();
 });
+
+//getting every input from user 
+typedByUser.addEventListener('input', (event) => {
+    headerInput.textContent = event.target.value;
+    compareWord();
+});
+
 
 //json api display as h1
 async function getRandomWord() {
@@ -29,3 +30,14 @@ async function getRandomWord() {
     return randomItem;
   }
 
+
+function compareWord() {
+
+    if (typedByUser === ) {
+        console.log('yea');
+    }
+    else {
+        console.log('nah');
+    }
+
+}
