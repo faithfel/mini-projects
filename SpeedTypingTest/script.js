@@ -1,11 +1,12 @@
 const typedByUser = document.querySelector('#typingInput');
-const headerWord = document.querySelector('#headerWord')
-
+const headerWord = document.querySelector('#headerWord');
+const headerInput = document.querySelector('#headerInput');
 
 
 //getting every input from user 
 typedByUser.addEventListener('input', (event) => {
-    console.log(event.target.value); 
+
+    headerInput.textContent = event.target.value;
 });
 
 // never remove focus out of input
@@ -27,3 +28,4 @@ async function getRandomWord() {
     
     return randomItem;
   }
+
