@@ -1,4 +1,7 @@
 const typedByUser = document.querySelector('#typingInput');
+const headerWord = document.querySelector('#headerWord')
+
+
 
 //getting every input from user 
 typedByUser.addEventListener('input', (event) => {
@@ -13,10 +16,11 @@ typedByUser.addEventListener('blur', () => {
 async function getRandomWord() {
 
     // Fetches 1 random word from the public API
-    const response = await fetch('https://random-word-api.herokuapp.com/all');
+    const response = await fetch('json/all.json');
     const data = await response.json();
     const randomIndex = Math.floor(Math.random() * data.length);
     const randomItem = data[randomIndex];
-    console.log("Your random selection:", randomItem);
+    console.log(randomItem);
+    headerWord.textContent = randomItem;
     return randomItem;
   }
