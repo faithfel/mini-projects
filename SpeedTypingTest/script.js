@@ -13,14 +13,17 @@ typedByUser.addEventListener('blur', () => {
     typedByUser.focus();
 });
 
+//json api display as h1
 async function getRandomWord() {
 
-    // Fetches 1 random word from the public API
     const response = await fetch('json/all.json');
     const data = await response.json();
+
     const randomIndex = Math.floor(Math.random() * data.length);
     const randomItem = data[randomIndex];
-    console.log(randomItem);
+
     headerWord.textContent = randomItem;
+    console.log(randomItem);
+    
     return randomItem;
   }
